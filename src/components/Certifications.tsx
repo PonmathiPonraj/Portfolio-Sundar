@@ -140,20 +140,6 @@ const Certifications = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Footer
-              <div className="px-6 py-4 border-t border-gray-100 bg-gray-50 rounded-b-xl">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <Calendar className="w-4 h-4" />
-                    <span>{cert.period}</span>
-                  </div>
-                  <button className="flex items-center space-x-1 text-blue-900 hover:text-blue-700 transition-colors">
-                    <span className="text-sm">View Details</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </button>
-                </div>
-              </div> */}
             </div>
           ))}
         </div>
@@ -162,15 +148,15 @@ const Certifications = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-8 p-6 bg-gray-50 rounded-xl shadow-lg">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-900">3</div>
+              <div className="text-3xl font-bold text-blue-900">12</div>
               <div className="text-sm text-gray-600">Certifications</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-900">2</div>
+              <div className="text-3xl font-bold text-blue-900">12</div>
               <div className="text-sm text-gray-600">Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-900">1</div>
+              <div className="text-3xl font-bold text-blue-900">0</div>
               <div className="text-sm text-gray-600">In Progress</div>
             </div>
           </div>

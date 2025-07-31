@@ -65,12 +65,7 @@ const Tools = () => {
     }
   ];
 
-  const systemTools = [
-    { name: 'Lotus Notes', icon: <FileText className="w-6 h-6" />, expertise: 'Advanced' },
-    { name: 'SAP', icon: <Monitor className="w-6 h-6" />, expertise: 'Expert' },
-    { name: 'IPS', icon: <Zap className="w-6 h-6" />, expertise: 'Proficient' },
-    { name: 'IMACS', icon: <Calendar className="w-6 h-6" />, expertise: 'Advanced' }
-  ];
+
 
   return (
     <section id="tools" className="py-20 bg-white">
@@ -124,57 +119,10 @@ const Tools = () => {
           ))}
         </div>
 
-        {/* System Experience */}
-        <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Enterprise Systems Experience</h3>
-          <div className="grid md:grid-cols-4 gap-6">
-            {systemTools.map((system, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-500 ${
-                  isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-                }`}
-                style={{ transitionDelay: `${index * 150 + 1000}ms` }}
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-900 text-white rounded-lg mb-4">
-                  {system.icon}
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{system.name}</h4>
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-medium rounded-full">
-                  {system.expertise}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         {/* Certification Highlights */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Technology Certifications</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6">
-              <div className="text-purple-600 mb-4">
-                <Zap className="w-8 h-8 mx-auto" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Generative AI in HR</h4>
-              <p className="text-sm text-gray-600">Advanced AI applications for HR processes</p>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6">
-              <div className="text-green-600 mb-4">
-                <BarChart3 className="w-8 h-8 mx-auto" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">HR Analytics</h4>
-              <p className="text-sm text-gray-600">Data-driven HR decision making</p>
-            </div>
-            <div className="bg-gradient-to-br from-orange-50 to-blue-50 rounded-xl p-6">
-              <div className="text-orange-600 mb-4">
-                <Users className="w-8 h-8 mx-auto" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Talent Acquisition Tech</h4>
-              <p className="text-sm text-gray-600">Modern recruiting technologies</p>
-            </div>
-          </div>
-        </div>
+        {/* REMOVED: Technology Certifications section */}
       </div>
     </section>
   );

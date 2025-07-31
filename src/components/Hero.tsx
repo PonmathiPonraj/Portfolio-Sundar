@@ -62,7 +62,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-blue-900" />
-                <span>sundarofficial.0414@gmail.com</span>
+                <span>ssundar.hr@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5 text-blue-900" />

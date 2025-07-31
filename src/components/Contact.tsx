@@ -54,12 +54,27 @@ const Contact = () => {
     }, 2000);
   };
 
+  // Handler for Download Resume
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Sundar_S_HR_Resume.pdf';
+    link.download = 'Sundar_S_HR_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Handler for Schedule a Call
+  const handleScheduleCall = () => {
+    window.open('https://calendly.com/your-scheduling-link', '_blank');
+  };
+
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'sundarofficial.0414@gmail.com',
-      link: 'mailto:sundarofficial.0414@gmail.com'
+      value: 'ssundar.hr@gmail.com',
+      link: 'mailto:ssundar.hr@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -87,7 +102,7 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6" />,
       name: 'Email',
       value: 'Professional Contact',
-      link: 'mailto:sundarofficial.0414@gmail.com',
+      link: 'mailto:ssundar.hr@gmail.com',
       color: 'hover:text-red-600'
     }
   ];
@@ -104,7 +119,7 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Contact Information (Left) */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="space-y-8">
               <div>
@@ -115,7 +130,6 @@ const Contact = () => {
                   let's start a conversation.
                 </p>
               </div>
-
               {/* Contact Details */}
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
@@ -134,149 +148,41 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-
-              {/* Social Links */}
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect on Social Media</h4>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ${social.color}`}
-                    >
-                      {social.icon}
-                      <span className="font-medium">{social.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quick Actions */}
-              <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h4>
-                <div className="space-y-3">
-                  <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300">
-                    <FileText className="w-5 h-5 text-blue-900" />
-                    <span className="font-medium">Download Resume</span>
-                  </button>
-                  <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300">
-                    <Calendar className="w-5 h-5 text-blue-900" />
-                    <span className="font-medium">Schedule a Call</span>
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
-
-              {isSubmitted && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                  <div>
-                    <p className="text-green-800 font-medium">Message sent successfully!</p>
-                    <p className="text-green-600 text-sm">I'll get back to you within 24 hours.</p>
-                  </div>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-colors duration-200"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-colors duration-200"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-colors duration-200"
+          {/* Social Media & Quick Actions (Right) */}
+          <div className={`transition-all duration-1000 delay-300 lg:flex lg:flex-col lg:justify-center lg:items-center h-full ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            {/* Social Links */}
+            <div className="mb-8 w-full">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect on Social Media</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ${social.color}`}
                   >
-                    <option value="">Select a subject</option>
-                    <option value="job-opportunity">Job Opportunity</option>
-                    <option value="hr-consultation">HR Consultation</option>
-                    <option value="collaboration">Collaboration</option>
-                    <option value="general-inquiry">General Inquiry</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-colors duration-200 resize-vertical"
-                    placeholder="Tell me about your project, requirements, or how I can help you..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-800 focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </>
-                  )}
+                    {social.icon}
+                    <span className="font-medium">{social.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/* Quick Actions */}
+            <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6 w-full">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h4>
+              <div className="space-y-3">
+                <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300" onClick={handleDownloadResume}>
+                  <FileText className="w-5 h-5 text-blue-900" />
+                  <span className="font-medium">Download Resume</span>
                 </button>
-              </form>
-
-              <div className="mt-6 text-center text-sm text-gray-500">
-                <p>I typically respond within 24 hours</p>
+                <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300" onClick={handleScheduleCall}>
+                  <Calendar className="w-5 h-5 text-blue-900" />
+                  <span className="font-medium">Schedule a Call</span>
+                </button>
               </div>
             </div>
           </div>

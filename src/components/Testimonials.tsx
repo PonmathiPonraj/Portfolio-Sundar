@@ -34,45 +34,40 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Rajesh Kumar',
-      position: 'Senior Software Engineer',
-      company: 'Kevell Corp',
+      name: 'Ranjit M',
+      position: 'HR Manager',
       content: 'Sundar made my onboarding experience exceptional. His attention to detail and genuine care for employee well-being is remarkable. The recruitment process was smooth and professional throughout.',
       rating: 5,
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
       id: 2,
-      name: 'Priya Sharma',
-      position: 'Marketing Manager',
-      company: 'Tech Solutions Inc',
+      name: 'Bhavani R',
+      position: 'HR Executive',
       content: 'Working with Sundar during our hiring process was fantastic. He understood our requirements perfectly and presented candidates who were not just qualified but also great cultural fits.',
       rating: 5,
       image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
       id: 3,
-      name: 'Michael Johnson',
-      position: 'Team Lead',
-      company: 'Global Tech Corp',
+      name: 'Ponmathi P',
+      position: 'Technical Trainer',
       content: 'Sundar\'s expertise in IT recruitment is outstanding. He has a deep understanding of technical roles and consistently delivers high-quality candidates within tight timelines.',
       rating: 5,
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
       id: 4,
-      name: 'Anita Patel',
-      position: 'HR Director',
-      company: 'Innovation Labs',
+      name: 'Ishwarya E',
+      position: 'HR Executive',
       content: 'Sundar brings fresh perspectives to HR practices. His implementation of employee engagement programs has significantly improved our workplace culture and retention rates.',
       rating: 5,
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
       id: 5,
-      name: 'David Chen',
-      position: 'Project Manager',
-      company: 'Digital Dynamics',
+      name: 'Akkiniraj K',
+      position: 'UI / UX Designer',
       content: 'The performance evaluation process Sundar designed is comprehensive yet user-friendly. It has helped our team members understand their growth paths clearly and stay motivated.',
       rating: 5,
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
@@ -134,9 +129,6 @@ const Testimonials = () => {
                     <p className="text-blue-900 font-medium">
                       {testimonials[currentTestimonial].position}
                     </p>
-                    <p className="text-gray-600 text-sm">
-                      {testimonials[currentTestimonial].company}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -182,11 +174,11 @@ const Testimonials = () => {
             <div className="text-gray-600">Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-900 mb-2">200+</div>
+            <div className="text-3xl font-bold text-blue-900 mb-2">120+</div>
             <div className="text-gray-600">Successful Placements</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-900 mb-2">4.9/5</div>
+            <div className="text-3xl font-bold text-blue-900 mb-2">4.6/5</div>
             <div className="text-gray-600">Average Rating</div>
           </div>
         </div>
