@@ -24,33 +24,58 @@ const Certifications = () => {
 
   const certifications = [
     {
-      title: 'Certified Compensation & Payroll Management Professional',
-      issuer: 'Professional Certification Body',
-      period: '2025',
+      title: 'Human Resource Manager Proficiency Test (Foundational)',
+      issuer: 'TCS - iON',
       status: 'Completed',
       category: 'Advanced',
-      details: ['Advanced certification in compensation strategies', 'Comprehensive payroll management', 'Strategic compensation planning'],
-      badge: 'Premium',
-      level: 'Expert'
-    },
-    {
-      title: 'Generative AI in HR',
-      issuer: 'Technology Institute',
-      period: '2024',
-      status: 'Completed',
-      category: 'Technology',
-      details: ['AI applications in human resources', 'Machine learning for HR processes', 'Automation strategies'],
-      badge: 'Innovation',
       level: 'Intermediate'
     },
     {
-      title: 'HR Manager Proficiency Test',
-      issuer: 'TCS iON',
-      period: '2023',
+      title: 'National Qualifier Test (NQT)',
+      issuer: 'TCS - iON',
       status: 'Completed',
-      category: 'Management',
-      details: ['Comprehensive HR management assessment', 'Leadership evaluation', 'Strategic HR planning'],
-      badge: 'Professional',
+      level: 'Expert'
+    },
+    {
+      title: 'LinkedIn Recruiter',
+      issuer: 'LinkedIn Learning',
+      status: 'Completed',
+      level: 'Expert'
+    },
+    {
+      title: 'Naukri Maestro Recruiter',
+      issuer: 'Naukri.com',
+      status: 'Completed',
+      level: 'Expert'
+    },
+    {
+      title: 'Hirist Tech Recruiter',
+      issuer: 'Hirist.com',
+      status: 'Completed',
+      level: 'Advanced'
+    },
+    {
+      title: 'Human Resources (Payroll)',
+      issuer: 'LinkedIn Learning',
+      status: 'Completed',
+      level: 'Advanced'
+    },
+    {
+      title: 'Generative AI, Recruiting, Talent Acquisition',
+      issuer: 'LinkedIn Learning',
+      status: 'Completed',
+      level: 'Advanced'
+    },
+    {
+      title: 'Certified Compensation & Payroll Management Professional - 25',
+      issuer: 'Udemy',
+      status: 'Completed',
+      level: 'Advanced'
+    },
+    {
+      title: 'ChatGPT for HR',
+      issuer: 'Great Learning',
+      status: 'Completed',
       level: 'Advanced'
     }
   ];
@@ -148,15 +173,15 @@ const Certifications = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-8 p-6 bg-gray-50 rounded-xl shadow-lg">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-900">12</div>
+              <div className="text-3xl font-bold text-blue-900">15+</div>
               <div className="text-sm text-gray-600">Certifications</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-900">12</div>
+              <div className="text-3xl font-bold text-blue-900">12+</div>
               <div className="text-sm text-gray-600">Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-900">0</div>
+              <div className="text-3xl font-bold text-blue-900">2+</div>
               <div className="text-sm text-gray-600">In Progress</div>
             </div>
           </div>

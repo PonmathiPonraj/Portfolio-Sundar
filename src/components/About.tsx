@@ -74,22 +74,24 @@ const About = () => {
                 Dynamic HR Professional with 4+ Years of Experience
               </h3>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
-                I'm a results-driven HR professional with strong academic credentials (MBA & MSW) and 
-                comprehensive experience across core HR functions. My expertise spans end-to-end recruitment, 
-                employee engagement, performance management, and strategic HR support.
+              <p className="text-gray-600 leading-relaxed">
+                A passionate and detail-oriented HR Generalist with hands-on experience across the full spectrum of human resource functions. 
+                From end-to-end recruitment (both IT & Non-IT) to onboarding, offboarding, and conducting orientation programs, I ensure a seamless and positive employee experience from day one. 
               </p>
               
               <p className="text-gray-600 leading-relaxed">
-                With a passion for fostering positive workplace cultures, I specialize in talent acquisition, 
-                onboarding, compliance management, and employee relations. I believe in data-driven HR decisions 
-                and have successfully implemented strategic initiatives that align with organizational goals while 
-                prioritizing employee satisfaction and development.
+                I take pride in driving impactful employee engagement initiatives, conducting background verifications, and clearly communicating HR policies that align with company culture. 
+                With a strong grasp of performance management, grievance handling, and staffing augmentation, 
+                I've built a solid foundation in supporting both employees and business goals. 
               </p>
 
+              <p className="text-gray-600 leading-relaxed">
+                What sets me apart is my ability to collaborate across teams, manage client expectations, and bring human-centric solutions to everyday HR challenges. 
+                I thrive on creating a workplace where people feel heard, valued, and empowered.
+              </p>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-900">200+</div>
+                  <div className="text-2xl font-bold text-blue-900">120+</div>
                   <div className="text-sm text-gray-600">Successful Hires</div>
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-lg">

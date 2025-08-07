@@ -24,43 +24,23 @@ const Tools = () => {
 
   const toolCategories = [
     {
-      title: 'HR Information Systems',
+      title: 'HRIS & Reporting',
       icon: <Database className="w-8 h-8" />,
       tools: [
-        { name: 'SAP SuccessFactors', level: 90, description: 'Employee lifecycle management' },
         { name: 'Workday', level: 85, description: 'HCM and payroll processing' },
-        { name: 'BambooHR', level: 88, description: 'HR operations and analytics' },
-        { name: 'ADP', level: 80, description: 'Payroll and benefits administration' }
+        { name: 'BambooHR', level: 80, description: 'HR operations and analytics' },
+        { name: 'Microsoft Office 365', level: 95, description: 'Word, Excel, PowerPoint, and Teams in the cloud' },
+        { name: 'Google Workspace', level: 90, description: 'Business email, docs, and secure file sharing' }
       ]
     },
     {
-      title: 'Applicant Tracking Systems',
+      title: 'ATS & Communication',
       icon: <Users className="w-8 h-8" />,
       tools: [
-        { name: 'LinkedIn Recruiter', level: 95, description: 'Talent sourcing and networking' },
-        { name: 'Indeed Hiring Platform', level: 90, description: 'Job posting and candidate management' },
-        { name: 'Greenhouse', level: 85, description: 'Recruitment workflow automation' },
-        { name: 'JazzHR', level: 82, description: 'Small business recruiting' }
-      ]
-    },
-    {
-      title: 'Analytics & Reporting',
-      icon: <BarChart3 className="w-8 h-8" />,
-      tools: [
-        { name: 'Microsoft Excel', level: 95, description: 'Data analysis and reporting' },
-        { name: 'Power BI', level: 80, description: 'Business intelligence dashboards' },
-        { name: 'Google Analytics', level: 75, description: 'Performance tracking' },
-        { name: 'Tableau', level: 70, description: 'Data visualization' }
-      ]
-    },
-    {
-      title: 'Communication & Collaboration',
-      icon: <Mail className="w-8 h-8" />,
-      tools: [
-        { name: 'Microsoft Teams', level: 92, description: 'Team collaboration and meetings' },
-        { name: 'Slack', level: 88, description: 'Workplace communication' },
-        { name: 'Zoom', level: 90, description: 'Video conferencing' },
-        { name: 'Asana', level: 85, description: 'Project management' }
+        { name: 'Candidate Sourcing', level: 95, description: 'Naukri, Dice, Monster(Foundit), Hirist' },
+        { name: 'Job Posting', level: 85, description: 'Naukri, Indeed, LinkedIn' },
+        { name: 'Video Conferencing', level: 95, description: 'MS Teams, Zoom, Google Meet' },
+        { name: 'Calls & Text', level: 90, description: 'Emails, Phone calls, WhatsApp' }
       ]
     }
   ];

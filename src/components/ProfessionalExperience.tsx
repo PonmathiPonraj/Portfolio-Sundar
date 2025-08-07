@@ -30,11 +30,10 @@ const ProfessionalExperience = () => {
       location: 'India',
       period: 'Feb 2024 - Present',
       achievements: [
-        'Managed end-to-end recruitment for IT and Non-IT roles with seamless candidate experience',
-        'Led onboarding and orientation sessions ensuring compliance with internal policies',
-        'Oversaw employee engagement, career development, and internal mobility programs',
-        'Served as primary contact for employee concerns and conflict resolution',
-        'Managed exit processes and conducted interviews for organizational improvement'
+        'Experienced HR Generalist with hands-on expertise in end-to-end recruitment for both IT and Non-IT roles, onboarding/offboarding, and background verification.', 
+        'Skilled in conducting orientation programs, educating employees on HR policies, and driving employee engagement and redemption initiatives.',
+        'Proven track record in managing performance appraisal processes, employee grievance resolution, and staffing augmentation.',
+        'Adept at client handling, stakeholder management, and supporting overall HR operations with efficiency and professionalism.'
       ]
     },
     {
@@ -43,10 +42,10 @@ const ProfessionalExperience = () => {
       location: 'India',
       period: 'Jul 2022 - Sep 2023',
       achievements: [
-        'Set up kickoff calls with hiring managers to understand role requirements',
-        'Built strong LinkedIn pipeline and connected with candidates via multiple channels',
-        'Managed sourcing, cold calling, screening profiles, and interview scheduling',
-        'Acted as bridge between candidates and hiring managers throughout recruitment process'
+        'Worked as a US IT Recruiter, handling both IT roles like Senior Java Developer, Solution Architect, QA Analyst, and Non-IT roles such as Sales Director, Mechanical Engineer, and Maintenance Engineer.',
+        'Proficient in using sourcing platforms like Dice, Monster, LinkedIn, and internal ATS for talent acquisition.',
+        'Experienced in cold calling, conducting initial screening interviews, collecting skill matrices via email, and coordinating interviews with hiring managers.',
+        'Maintained strong candidate pipelines and ensured smooth communication across all stages of the recruitment process.'
       ]
     },
     {
@@ -55,11 +54,11 @@ const ProfessionalExperience = () => {
       location: 'India',
       period: 'Dec 2020 - Apr 2022',
       achievements: [
-        'Worked with Lotus Notes, SAP, IPS, and IMACS systems for customer account reviews',
-        'Audited onshore reports and provided feedback to teams',
-        'Reconciled data, created live spreadsheets, and processed customer payments',
-        'Handled rejected payments through resolution and reprocessing',
-        'Trained new employees and supported various operational tasks'
+        'Worked on Reinsurance payment operations, handling high-value transactions across multiple global currencies.',
+        'Utilized tools such as Lotus Notes, SAP, IPS, and IMACS to conduct detailed customer account reviews and data reconciliations.',
+        'Audited onshore reports, provided actionable feedback, and managed rejected payments through resolution and reprocessing.',
+        'Created live spreadsheets for real-time tracking and processed customer payments efficiently.',
+        'Also trained new employees and supported various operational and reporting tasks to ensure compliance and accuracy.'
       ]
     }
   ];

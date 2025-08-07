@@ -125,9 +125,10 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  I'm always interested in discussing new opportunities, HR challenges, or ways to improve 
-                  workplace culture. Whether you're looking for HR expertise or want to explore collaboration, 
-                  let's start a conversation.
+                  Looking to decode HR puzzles, boost team engagement, or just need someone who knows the difference between hiring fast and hiring right.
+                  Whether it's strategy, collaboration, or culture-building, I'm always up for meaningful conversations.
+                  <br />📩 Ping me - No icebreakers needed. I'm in HR, I've seen it all!
+
                 </p>
               </div>
               {/* Contact Details */}
