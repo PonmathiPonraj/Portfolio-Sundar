@@ -116,19 +116,19 @@ const SkillsAndProjects = () => {
 
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Strengths in Action</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Strengths in Action</h2>
           <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A comprehensive skill set demonstrated through core HR competencies and leadership capabilities.
           </p>
         </div>
 
         {/* Skills Section */}
         {/* <div className="mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Core HR Competencies</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Core HR Competencies</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {skills.map((skill, index) => (
               <div
@@ -143,8 +143,8 @@ const SkillsAndProjects = () => {
                     {skill.icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">{skill.name}</h4>
-                    <p className="text-sm text-gray-600">{skill.description}</p>
+                    <h4 className="text-lg font-semibold text-white">{skill.name}</h4>
+                    <p className="text-sm text-gray-300">{skill.description}</p>
                   </div>
                 </div>
                 
@@ -156,7 +156,7 @@ const SkillsAndProjects = () => {
 
         {/* Leadership Competencies */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Leadership Competencies</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Leadership Competencies</h3>
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
             {competencies.map((competency, index) => (
               <div
@@ -187,10 +187,10 @@ const SkillsAndProjects = () => {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-xs font-bold text-gray-900">{competency.level}%</span>
+                    <span className="text-xs font-bold text-white">{competency.level}%</span>
                   </div>
                 </div>
-                <h4 className="text-sm font-semibold text-gray-900">{competency.name}</h4>
+                <h4 className="text-sm font-semibold text-white">{competency.name}</h4>
               </div>
             ))}
           </div>

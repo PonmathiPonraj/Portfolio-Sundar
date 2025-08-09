@@ -48,12 +48,12 @@ const Tools = () => {
 
 
   return (
-    <section id="tools" className="py-20 bg-white">
+    <section id="tools" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Tools & Technologies</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Tools & Technologies</h2>
           <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Proficient in modern HR technologies and systems that streamline processes and enhance productivity.
           </p>
         </div>
@@ -72,17 +72,17 @@ const Tools = () => {
                 <div className="p-3 bg-blue-900 text-white rounded-lg mr-4">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
+                <h3 className="text-xl font-bold text-black">{category.title}</h3>
               </div>
 
               <div className="space-y-4">
                 {category.tools.map((tool, toolIndex) => (
                   <div key={toolIndex} className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-2">
-                      <h4 className="font-semibold text-gray-900">{tool.name}</h4>
+                      <h4 className="font-semibold text-black">{tool.name}</h4>
                       <span className="text-sm font-medium text-blue-900">{tool.level}%</span>
                     </div>
-                    <p className="text-sm text-gray-600 mb-3">{tool.description}</p>
+                    <p className="text-sm text-black mb-3">{tool.description}</p>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
                         className="bg-gradient-to-r from-blue-900 to-blue-700 h-2 rounded-full transition-all duration-1000 ease-out"

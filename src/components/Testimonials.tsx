@@ -54,7 +54,7 @@ const Testimonials = () => {
       position: 'Technical Trainer',
       content: 'Sundar\'s expertise in IT recruitment is outstanding. He has a deep understanding of technical roles and consistently delivers high-quality candidates within tight timelines.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
       id: 4,
@@ -83,12 +83,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-br from-blue-50 via-white to-slate-50">
+    <section id="testimonials" className="py-20 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What People Say</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">What People Say</h2>
           <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Feedback from colleagues, managers, and candidates I've had the privilege to work with.
           </p>
         </div>
@@ -123,7 +123,7 @@ const Testimonials = () => {
                     className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
                   />
                   <div className="text-center">
-                    <h4 className="text-lg font-bold text-gray-900">
+                    <h4 className="text-lg font-bold text-black">
                       {testimonials[currentTestimonial].name}
                     </h4>
                     <p className="text-blue-900 font-medium">
@@ -170,16 +170,16 @@ const Testimonials = () => {
         {/* Stats */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-900 mb-2">95%</div>
-            <div className="text-gray-600">Client Satisfaction</div>
+            <div className="text-3xl font-bold text-white mb-2">95%</div>
+            <div className="text-gray-300">Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-900 mb-2">120+</div>
-            <div className="text-gray-600">Successful Placements</div>
+            <div className="text-3xl font-bold text-white mb-2">120+</div>
+            <div className="text-gray-300">Successful Placements</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-900 mb-2">4.6/5</div>
-            <div className="text-gray-600">Average Rating</div>
+            <div className="text-3xl font-bold text-white mb-2">4.6/5</div>
+            <div className="text-gray-300">Average Rating</div>
           </div>
         </div>
       </div>

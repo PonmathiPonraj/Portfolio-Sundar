@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin, FileText, Calendar } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Linkedin, FileText, Calendar } from 'lucide-react';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,51 +22,14 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 2000);
-  };
-
-  // Handler for Download Resume
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/Sundar_S_HR_Resume.pdf';
-    link.download = 'Sundar_S_HR_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  // Handler for Schedule a Call
-  const handleScheduleCall = () => {
-    window.open('https://calendly.com/your-scheduling-link', '_blank');
-  };
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'ssundar.hr@gmail.com',
-      link: 'mailto:ssundar.hr@gmail.com'
+      value: 'sundarofficial.0414@gmail.com',
+      link: 'mailto:sundarofficial.0414@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -102,35 +57,35 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6" />,
       name: 'Email',
       value: 'Professional Contact',
-      link: 'mailto:ssundar.hr@gmail.com',
+      link: 'mailto:sundarofficial.0414@gmail.com',
       color: 'hover:text-red-600'
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to discuss your HR needs or explore potential opportunities? I'd love to hear from you.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information (Left) */}
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="space-y-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Contact Information */}
+          <div className={`flex justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className="w-full max-w-lg space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  Looking to decode HR puzzles, boost team engagement, or just need someone who knows the difference between hiring fast and hiring right.
-                  Whether it's strategy, collaboration, or culture-building, I'm always up for meaningful conversations.
-                  <br />📩 Ping me - No icebreakers needed. I'm in HR, I've seen it all!
-
+                <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+                <p className="text-gray-300 leading-relaxed mb-8">
+                  I'm always interested in discussing new opportunities, HR challenges, or ways to improve 
+                  workplace culture. Whether you're looking for HR expertise or want to explore collaboration, 
+                  let's start a conversation.
                 </p>
               </div>
+
               {/* Contact Details */}
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
@@ -152,38 +107,41 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Social Media & Quick Actions (Right) */}
-          <div className={`transition-all duration-1000 delay-300 lg:flex lg:flex-col lg:justify-center lg:items-center h-full ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            {/* Social Links */}
-            <div className="mb-8 w-full">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect on Social Media</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ${social.color}`}
-                  >
-                    {social.icon}
-                    <span className="font-medium">{social.name}</span>
-                  </a>
-                ))}
+          {/* Social Links & Quick Actions */}
+          <div className={`flex justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className="w-full max-w-lg space-y-8">
+              {/* Social Links */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Connect on Social Media</h4>
+                <div className="flex space-x-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ${social.color}`}
+                    >
+                      {social.icon}
+                      <span className="font-medium">{social.name}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-            {/* Quick Actions */}
-            <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6 w-full">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h4>
-              <div className="space-y-3">
-                <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300" onClick={handleDownloadResume}>
-                  <FileText className="w-5 h-5 text-blue-900" />
-                  <span className="font-medium">Download Resume</span>
-                </button>
-                <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300" onClick={handleScheduleCall}>
-                  <Calendar className="w-5 h-5 text-blue-900" />
-                  <span className="font-medium">Schedule a Call</span>
-                </button>
+
+              {/* Quick Actions */}
+              <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h4>
+                <div className="space-y-3">
+                  <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300">
+                    <FileText className="w-5 h-5 text-blue-900" />
+                    <span className="font-medium">Download Resume</span>
+                  </button>
+                  <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300">
+                    <Calendar className="w-5 h-5 text-blue-900" />
+                    <span className="font-medium">Schedule a Call</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -191,7 +149,7 @@ const Contact = () => {
 
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-gray-200 text-center">
-          <p className="text-gray-600">
+          <p className="text-gray-300">
             © 2025 Sundar S. Built with passion for connecting great people with great opportunities.
           </p>
         </div>

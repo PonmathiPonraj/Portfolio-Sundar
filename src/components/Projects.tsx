@@ -107,12 +107,12 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Key Projects & Achievements</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Key Projects & Achievements</h2>
           <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Strategic HR initiatives that have driven measurable business impact and enhanced employee experience.
           </p>
         </div>
@@ -134,7 +134,7 @@ const Projects = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+                      <h3 className="text-xl font-bold text-white">{project.title}</h3>
                       <div className="flex items-center text-sm text-gray-500">
                         {project.status === 'Completed' ? (
                           <CheckCircle className="w-4 h-4 text-green-500 mr-1" />
@@ -148,23 +148,23 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-6">{project.description}</p>
+                <p className="text-gray-300 mb-6">{project.description}</p>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   {Object.entries(project.metrics).map(([key, value]) => (
                     <div key={key} className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="text-lg font-bold text-blue-900">{value}</div>
-                      <div className="text-xs text-gray-600">{key}</div>
+                      <div className="text-xs text-gray-300">{key}</div>
                     </div>
                   ))}
                 </div>
 
                 {selectedProject === index && (
                   <div className="border-t border-gray-200 pt-6 mt-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Achievements</h4>
+                    <h4 className="text-lg font-semibold text-white mb-4">Key Achievements</h4>
                     <ul className="space-y-2">
                       {project.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="flex items-start space-x-2 text-gray-600">
+                        <li key={achIndex} className="flex items-start space-x-2 text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                           <span className="text-sm">{achievement}</span>
                         </li>
@@ -194,15 +194,15 @@ const Projects = () => {
           <div className="inline-flex items-center space-x-8 p-6 bg-white rounded-xl shadow-lg">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-900">4+</div>
-              <div className="text-sm text-gray-600">Major Projects</div>
+              <div className="text-sm text-gray-300">Major Projects</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-900">95%</div>
-              <div className="text-sm text-gray-600">Success Rate</div>
+              <div className="text-sm text-gray-300">Success Rate</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-900">200+</div>
-              <div className="text-sm text-gray-600">Lives Impacted</div>
+              <div className="text-sm text-gray-300">Lives Impacted</div>
             </div>
           </div>
         </div>

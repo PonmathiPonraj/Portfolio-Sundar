@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, Award, CheckCircle, Clock, ExternalLink, Star } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { CheckCircle, Clock, Star } from 'lucide-react';
 
 const Certifications = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -91,39 +91,13 @@ const Certifications = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Advanced':
-        return 'bg-purple-100 text-purple-800';
-      case 'Technology':
-        return 'bg-blue-100 text-blue-800';
-      case 'Management':
-        return 'bg-green-100 text-green-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getBadgeColor = (badge: string) => {
-    switch (badge) {
-      case 'Premium':
-        return 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white';
-      case 'Innovation':
-        return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
-      case 'Professional':
-        return 'bg-gradient-to-r from-green-500 to-teal-600 text-white';
-      default:
-        return 'bg-gray-500 text-white';
-    }
-  };
-
   return (
-    <section id="certifications" className="py-20 bg-white">
+    <section id="certifications" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Certifications</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Professional Certifications</h2>
           <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Continuous learning and professional development through industry-recognized certifications.
           </p>
         </div>
@@ -142,7 +116,7 @@ const Certifications = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">{cert.title}</h3>
+                    <h3 className="text-lg font-bold text-black mb-2 line-clamp-2">{cert.title}</h3>
                     <p className="text-blue-900 font-semibold text-sm">{cert.issuer}</p>
                   </div>
                   <div className="flex items-center space-x-1">
@@ -174,15 +148,15 @@ const Certifications = () => {
           <div className="inline-flex items-center space-x-8 p-6 bg-gray-50 rounded-xl shadow-lg">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-900">15+</div>
-              <div className="text-sm text-gray-600">Certifications</div>
+              <div className="text-sm text-gray-700">Certifications</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-900">12+</div>
-              <div className="text-sm text-gray-600">Completed</div>
+              <div className="text-sm text-gray-700">Completed</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-900">2+</div>
-              <div className="text-sm text-gray-600">In Progress</div>
+              <div className="text-sm text-gray-700">In Progress</div>
             </div>
           </div>
         </div>

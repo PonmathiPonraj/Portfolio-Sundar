@@ -147,7 +147,7 @@ const Resume = () => {
   };
 
   return (
-    <section id="resume" className="py-20 bg-gray-50">
+    <section id="resume" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Journey</h2>
@@ -192,7 +192,7 @@ const Resume = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="text-right text-sm text-gray-600">
+                    <div className="text-right text-sm text-gray-300">
                       <div className="flex items-center space-x-1">
                         <Calendar className="w-4 h-4" />
                         <span>{item.period}</span>
@@ -207,7 +207,7 @@ const Resume = () => {
                   {item.type === 'work' && (
                     <ul className="space-y-2">
                       {(item as any).achievements.map((achievement: string, achIndex: number) => (
-                        <li key={achIndex} className="flex items-start space-x-2 text-gray-600">
+                        <li key={achIndex} className="flex items-start space-x-2 text-gray-300">
                           <div className="w-1.5 h-1.5 bg-blue-900 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{achievement}</span>
                         </li>
@@ -218,7 +218,7 @@ const Resume = () => {
                   {(item.type === 'education' || item.type === 'certification') && (
                     <ul className="space-y-1">
                       {(item as any).details?.map((detail: string, detailIndex: number) => (
-                        <li key={detailIndex} className="text-gray-600 text-sm">
+                        <li key={detailIndex} className="text-gray-300 text-sm">
                           • {detail}
                         </li>
                       ))}
