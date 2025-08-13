@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Linkedin, FileText, Calendar } from 'lucide-react';
+import { Mail, Linkedin, FileText, Calendar, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,22 +26,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
+      icon: <MessageCircle className="w-6 h-6" />,
+      title: 'WhatsApp',
+      value: '+91 6369115038',
+      link: 'https://wa.me/916369115038'
+    },
+    {
+      icon: <Linkedin className="w-6 h-6" />,
+      title: 'LinkedIn',
+      value: 'Sundar Sivanesan',
+      link: 'https://linkedin.com/in/sundar-sivanesan'
+    },
+    {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'sundarofficial.0414@gmail.com',
-      link: 'mailto:sundarofficial.0414@gmail.com'
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone',
-      value: '+91 6369115038',
-      link: 'tel:+916369115038'
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: 'Location',
-      value: 'Madurai, Tamil Nadu, India',
-      link: '#'
+      value: 'ssundar.hr@gmail.com',
+      link: 'mailto:ssundar.hr@gmail.com'
     }
   ];
 
@@ -57,7 +57,7 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6" />,
       name: 'Email',
       value: 'Professional Contact',
-      link: 'mailto:sundarofficial.0414@gmail.com',
+      link: 'mailto:ssundar.hr@gmail.com',
       color: 'hover:text-red-600'
     }
   ];
@@ -137,10 +137,13 @@ const Contact = () => {
                     <FileText className="w-5 h-5 text-blue-900" />
                     <span className="font-medium">Download Resume</span>
                   </button>
-                  <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300">
+                  <a 
+                    href="tel:+916369115038"
+                    className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300"
+                  >
                     <Calendar className="w-5 h-5 text-blue-900" />
                     <span className="font-medium">Schedule a Call</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

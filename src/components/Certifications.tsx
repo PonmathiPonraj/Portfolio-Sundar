@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CheckCircle, Clock, Star } from 'lucide-react';
+import { CheckCircle, Clock, Star, Building2, Linkedin, Briefcase, Code, GraduationCap, BookOpen } from 'lucide-react';
 
 const Certifications = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,15 +24,8 @@ const Certifications = () => {
 
   const certifications = [
     {
-      title: 'Human Resource Manager Proficiency Test (Foundational)',
-      issuer: 'TCS - iON',
-      status: 'Completed',
-      category: 'Advanced',
-      level: 'Intermediate'
-    },
-    {
-      title: 'National Qualifier Test (NQT)',
-      issuer: 'TCS - iON',
+      title: 'Naukri Maestro Recruiter',
+      issuer: 'Naukri.com',
       status: 'Completed',
       level: 'Expert'
     },
@@ -43,20 +36,21 @@ const Certifications = () => {
       level: 'Expert'
     },
     {
-      title: 'Naukri Maestro Recruiter',
-      issuer: 'Naukri.com',
-      status: 'Completed',
-      level: 'Expert'
-    },
-    {
       title: 'Hirist Tech Recruiter',
       issuer: 'Hirist.com',
       status: 'Completed',
       level: 'Advanced'
     },
     {
-      title: 'Human Resources (Payroll)',
-      issuer: 'LinkedIn Learning',
+      title: 'Human Resource Manager Proficiency Test (Foundational)',
+      issuer: 'TCS - iON',
+      status: 'Completed',
+      category: 'Advanced',
+      level: 'Intermediate'
+    },
+    {
+      title: 'Certified Compensation & Payroll Management Professional - 25',
+      issuer: 'Udemy',
       status: 'Completed',
       level: 'Advanced'
     },
@@ -67,14 +61,20 @@ const Certifications = () => {
       level: 'Advanced'
     },
     {
-      title: 'Certified Compensation & Payroll Management Professional - 25',
-      issuer: 'Udemy',
+      title: 'ChatGPT for HR',
+      issuer: 'Great Learning',
       status: 'Completed',
       level: 'Advanced'
     },
     {
-      title: 'ChatGPT for HR',
-      issuer: 'Great Learning',
+      title: 'National Qualifier Test (NQT)',
+      issuer: 'TCS - iON',
+      status: 'Completed',
+      level: 'Expert'
+    },
+    {
+      title: 'Human Resources (Payroll)',
+      issuer: 'LinkedIn Learning',
       status: 'Completed',
       level: 'Advanced'
     }
@@ -88,6 +88,25 @@ const Certifications = () => {
         return 'bg-blue-100 text-blue-800 border-blue-200';
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200';
+    }
+  };
+
+  const getIssuerIcon = (issuer: string) => {
+    switch (issuer) {
+      case 'TCS - iON':
+        return <Building2 className="w-4 h-4 text-blue-600" />;
+      case 'LinkedIn Learning':
+        return <Linkedin className="w-4 h-4 text-blue-700" />;
+      case 'Naukri.com':
+        return <Briefcase className="w-4 h-4 text-orange-600" />;
+      case 'Hirist.com':
+        return <Code className="w-4 h-4 text-purple-600" />;
+      case 'Udemy':
+        return <BookOpen className="w-4 h-4 text-red-600" />;
+      case 'Great Learning':
+        return <GraduationCap className="w-4 h-4 text-green-600" />;
+      default:
+        return <GraduationCap className="w-4 h-4 text-gray-600" />;
     }
   };
 
@@ -117,7 +136,10 @@ const Certifications = () => {
                   <div className="flex-1">
                     
                     <h3 className="text-lg font-bold text-black mb-2 line-clamp-2">{cert.title}</h3>
-                    <p className="text-blue-900 font-semibold text-sm">{cert.issuer}</p>
+                    <div className="flex items-center space-x-2">
+                      {getIssuerIcon(cert.issuer)}
+                      <p className="text-blue-900 font-semibold text-sm">{cert.issuer}</p>
+                    </div>
                   </div>
                   <div className="flex items-center space-x-1">
                     {cert.status === 'Completed' ? (
