@@ -1,8 +1,52 @@
-import { useState, useEffect } from 'react';
-import { Mail, Linkedin, FileText, Calendar, MessageCircle } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Mail, Linkedin, FileText, Calendar, MessageCircle, X, Chrome, MessageSquare, Phone } from 'lucide-react';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showAppDialog, setShowAppDialog] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  const handleScheduleCall = () => {
+    setShowAppDialog(true);
+  };
+
+  const handleCloseDialog = (e: React.MouseEvent) => {
+    if (dialogRef.current && !dialogRef.current.contains(e.target as Node)) {
+      setShowAppDialog(false);
+    }
+  };
+
+  const appOptions = [
+    {
+      name: 'Google Meet',
+      icon: <Chrome className="w-6 h-6" />,
+      action: () => window.open('https://meet.google.com/new', '_blank')
+    },
+    {
+      name: 'WhatsApp',
+      icon: <MessageSquare className="w-6 h-6" />,
+      action: () => window.open('https://wa.me/916369115038', '_blank')
+    },
+    {
+      name: 'LinkedIn',
+      icon: <Linkedin className="w-6 h-6" />,
+      action: () => window.open('https://linkedin.com/in/sundar-sivanesan', '_blank')
+    },
+    {
+      name: 'Gmail',
+      icon: <Mail className="w-6 h-6" />,
+      action: () => {
+        const subject = 'Schedule a Call';
+        const body = 'Hi Sundar, I would like to schedule a call with you.';
+        window.location.href = `mailto:ssundar.hr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+    },
+    {
+      name: 'Phone',
+      icon: <Phone className="w-6 h-6" />,
+      action: () => window.location.href = 'tel:+916369115038'
+    }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,13 +96,6 @@ const Contact = () => {
       value: 'Sundar Sivanesan',
       link: 'https://linkedin.com/in/sundar-sivanesan',
       color: 'hover:text-blue-600'
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      name: 'Email',
-      value: 'Professional Contact',
-      link: 'mailto:ssundar.hr@gmail.com',
-      color: 'hover:text-red-600'
     }
   ];
 
@@ -137,13 +174,13 @@ const Contact = () => {
                     <FileText className="w-5 h-5 text-blue-900" />
                     <span className="font-medium">Download Resume</span>
                   </button>
-                  <a 
-                    href="tel:+916369115038"
-                    className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300"
+                  <button 
+                    onClick={handleScheduleCall}
+                    className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300 text-left"
                   >
                     <Calendar className="w-5 h-5 text-blue-900" />
                     <span className="font-medium">Schedule a Call</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -157,6 +194,47 @@ const Contact = () => {
           </p>
         </div>
       </div>
+
+      {/* App Selection Dialog */}
+      {showAppDialog && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={handleCloseDialog}
+        >
+          <div 
+            ref={dialogRef}
+            className="bg-white rounded-xl p-6 w-full max-w-md"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-xl font-semibold text-gray-900">Choose an App</h3>
+              <button 
+                onClick={() => setShowAppDialog(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="space-y-3">
+              {appOptions.map((app, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    app.action();
+                    setShowAppDialog(false);
+                  }}
+                  className="w-full flex items-center space-x-4 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                >
+                  <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                    {app.icon}
+                  </div>
+                  <span className="font-medium text-gray-900">{app.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -62,7 +62,7 @@ const Testimonials = () => {
       position: 'HR Executive',
       content: 'Sundar brings fresh perspectives to HR practices. His implementation of employee engagement programs has significantly improved our workplace culture and retention rates.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
       id: 5,
@@ -70,7 +70,7 @@ const Testimonials = () => {
       position: 'UI / UX Designer',
       content: 'The performance evaluation process Sundar designed is comprehensive yet user-friendly. It has helped our team members understand their growth paths clearly and stay motivated.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     }
   ];
 
@@ -178,7 +178,7 @@ const Testimonials = () => {
             <div className="text-gray-300">Successful Placements</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">4.6/5</div>
+            <div className="text-3xl font-bold text-white mb-2">4.2/5</div>
             <div className="text-gray-300">Average Rating</div>
           </div>
         </div>
