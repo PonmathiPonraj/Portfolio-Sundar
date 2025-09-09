@@ -148,8 +148,8 @@ const Contact = () => {
           <div className={`flex justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="w-full max-w-lg space-y-8">
               {/* Social Links */}
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Connect on Social Media</h4>
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h4 className="text-lg font-semibold text-gray-800 mb-4">Connect on Social Media</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -157,7 +157,7 @@ const Contact = () => {
                       href={social.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ${social.color}`}
+                      className={`flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-800 rounded-lg shadow-sm hover:bg-gray-200 transition-all duration-300 ${social.color} hover:text-blue-600`}
                     >
                       {social.icon}
                       <span className="font-medium">{social.name}</span>
@@ -167,18 +167,18 @@ const Contact = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h4>
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <h4 className="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h4>
                 <div className="space-y-3">
-                  <button className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300">
-                    <FileText className="w-5 h-5 text-blue-900" />
+                  <button className="w-full flex items-center space-x-3 p-3 bg-gray-50 text-gray-800 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                    <FileText className="w-5 h-5 text-blue-600" />
                     <span className="font-medium">Download Resume</span>
                   </button>
                   <button 
                     onClick={handleScheduleCall}
-                    className="w-full flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-all duration-300 text-left"
+                    className="w-full flex items-center space-x-3 p-3 bg-gray-50 text-gray-800 rounded-lg hover:bg-gray-100 transition-all duration-300 text-left"
                   >
-                    <Calendar className="w-5 h-5 text-blue-900" />
+                    <Calendar className="w-5 h-5 text-blue-600" />
                     <span className="font-medium">Schedule a Call</span>
                   </button>
                 </div>

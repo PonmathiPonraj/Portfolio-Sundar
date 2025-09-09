@@ -51,18 +51,18 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen bg-slate-900 text-white">
       <Header activeSection={activeSection} />
       <main>
-        <Hero />
-        <About />
-        <ProfessionalExperience />
-        <Education />
-        <Certifications />
-        <SkillsAndProjects />
-        <Tools />
-        <Testimonials />
-        <Contact />
+        <Hero id="home" />
+        <About id="about" />
+        <ProfessionalExperience id="experience" />
+        <Education id="education" />
+        <Certifications id="certifications" />
+        <SkillsAndProjects id="skills" />
+        <Tools id="tools" />
+        <Testimonials id="testimonials" />
+        <Contact id="contact" />
       </main>
     </div>
   );
