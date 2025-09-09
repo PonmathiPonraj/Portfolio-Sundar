@@ -9,7 +9,21 @@
     overflow-x: hidden;
   }
 
-  /* Add subtle noise texture */
+  /* Subtle floating particles */
+  .particle {
+    @apply absolute rounded-full bg-gradient-to-r from-blue-400/20 to-indigo-400/20 backdrop-blur-sm;
+    filter: blur(0.5px);
+    pointer-events: none;
+  }
+
+  /* Animated gradient orbs */
+  .gradient-orb {
+    @apply absolute rounded-full mix-blend-soft-light opacity-30;
+    filter: blur(60px);
+    animation: float 20s ease-in-out infinite;
+  }
+
+  /* Noise texture */
   body::before {
     content: '';
     position: fixed;
@@ -22,7 +36,7 @@
     z-index: -1;
   }
 
-  /* Add subtle grid overlay */
+  /* Grid overlay */
   body::after {
     content: '';
     position: fixed;

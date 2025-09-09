@@ -10,6 +10,7 @@ import SkillsAndProjects from './components/SkillsAndProjects';
 import Tools from './components/Tools';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,19 +52,22 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <Header activeSection={activeSection} />
-      <main>
-        <Hero id="home" />
-        <About id="about" />
-        <ProfessionalExperience id="experience" />
-        <Education id="education" />
-        <Certifications id="certifications" />
-        <SkillsAndProjects id="skills" />
-        <Tools id="tools" />
-        <Testimonials id="testimonials" />
-        <Contact id="contact" />
-      </main>
+    <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <Header activeSection={activeSection} />
+        <main>
+          <Hero id="home" />
+          <About id="about" />
+          <ProfessionalExperience id="experience" />
+          <Education id="education" />
+          <Certifications id="certifications" />
+          <SkillsAndProjects id="skills" />
+          <Tools id="tools" />
+          <Testimonials id="testimonials" />
+          <Contact id="contact" />
+        </main>
+      </div>
     </div>
   );
 }

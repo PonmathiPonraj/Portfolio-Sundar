@@ -6,6 +6,9 @@ export default {
       animation: {
         'gradient-shift': 'gradientShift 20s ease infinite',
         'gradient-pulse': 'gradientPulse 10s ease-in-out infinite',
+        'float': 'float 8s ease-in-out infinite',
+        'float-reverse': 'float 10s ease-in-out infinite reverse',
+        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         gradientShift: {
@@ -15,6 +18,12 @@ export default {
           '50%': {
             'background-position': '100% 50%',
           },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+          '25%': { transform: 'translateY(-20px) translateX(10px)' },
+          '50%': { transform: 'translateY(0) translateX(20px)' },
+          '75%': { transform: 'translateY(20px) translateX(10px)' },
         },
         gradientPulse: {
           '0%, 100%': {

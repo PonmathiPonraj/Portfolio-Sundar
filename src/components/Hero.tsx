@@ -2,7 +2,11 @@ import { motion } from 'framer-motion';
 import { ChevronDown, MapPin, Mail, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const Hero = () => {
+interface HeroProps {
+  id: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ id }) => {
   const [displayText, setDisplayText] = useState('');
   const fullText = 'Empowering People. Building Culture. Driving Growth.';
   
@@ -69,11 +73,10 @@ const Hero = () => {
 
   return (
     <motion.section 
-      id="home" 
-      className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden"
+      id={id} 
+      className="relative h-screen flex items-center justify-center overflow-hidden"
       initial="hidden"
       animate="visible"
-      variants={containerVariants}
     >
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-90"></div>
